@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<header class='fixed'>
+	<header>
 		<div class="logo">
 			<img src="img/logo.png" alt="">
 		</div>
@@ -21,14 +21,34 @@
 				<a href="" class='plazas_btn'>PLAZAS</a>
 			</nav>
 		</div>
+		<div class="menu_mobile">
+			<div class="logo">
+				<img src="img/logo.png" alt="">
+			</div>
+			<div class="bars">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+			</div>
+		</div>
 	</header>
+	<div class="black"></div>
+	<div class="menu_options">
+		<div class="cross">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</div>
+		<nav>
+			<a href="" class='want'>QUIERO MI CRÉDITO</a>
+			<a href="" class='ventajas_btn'>VENTAJAS</a>
+			<a href="" class='requisitos_btn'>REQUISITOS</a>
+			<a href="" class='plazas_btn'>PLAZAS</a>
+		</nav>
+	</div>
 	<div class="thumb">
 		<div class="slider">
 			<ul>
 				<li><img src="img/thumb1.jpg"></li>
 				<li><img src="img/thumb2.jpg"></li>
+				<li><img src="img/thumb3.jpg"></li>
 				<li><img src="img/thumb1.jpg"></li>
-				<li><img src="img/thumb2.jpg"></li>
 			</ul>
 		</div>
 		<div class="content">
@@ -64,25 +84,35 @@
 						<input type="text" placeholder="Teléfono">
 					</div>
 					<div class="inputflex">
-						<select name="" id="">
-							<option value="">Monto del préstamo</option>
-						</select>
-						<select name="" id="">
-							<option value="">Plazo</option>
-						</select>
+						<div class="select">
+							<select name="" id="">
+								<option value="">Monto del préstamo</option>
+							</select>
+						</div>
+						<div class="select">
+							<select name="" id="">
+								<option value="">Plazo</option>
+							</select>
+						</div>
 					</div>
 					<div class="inputflex">
-						<select name="" id="">
-							<option value="">Tipo de propiedad</option>
-						</select>
+						<div class="select">
+							<select name="" id="">
+								<option value="">Tipo de propiedad</option>
+							</select>
+						</div>
 						<input type="text" name="" placeholder="Valor de la propiedad">
 					</div>
-					<select name="" id="">
-						<option value="">Estado</option>
-					</select>
-					<select name="" id="">
-						<option value="">Municipios o Alcaldias</option>
-					</select>
+					<div class="select">
+						<select name="" id="">
+							<option value="">Estado</option>
+						</select>
+					</div>
+					<div class="select">
+						<select name="" id="">
+							<option value="">Municipios o Alcaldias</option>
+						</select>
+					</div>
 					<input type="text" placeholder="Calle y Número">
 					<input type="text" placeholder="Código Postal">
 					<input type="submit" value="OBTENER MI CRÉDITO">
@@ -108,13 +138,17 @@
 			</div>
 			<div class="steps">
 				<ul>
-					<li><i class="fa fa-laptop" aria-hidden="true"></i><div class="txt">
-						<span>1.</span> Llenar el formulario de precalificación en línea.</div></li>
-					<li><i class="fa fa-laptop" aria-hidden="true"></i><div class="txt"><span>2.</span> En 72 hrs. te informamos si tu solicitud fue aceptada.</div></li>
-					<li><i class="fa fa-laptop" aria-hidden="true"></i><div class="txt">
+					<li>
+						<img src="img/paso-1.jpg" alt="">
+						<div class="txt">
+							<span>1.</span> Llenar el formulario de precalificación en línea.
+						</div>
+					</li>
+					<li><img src="img/paso-2.jpg" alt=""><div class="txt"><span>2.</span> En 72 hrs. te informamos si tu solicitud fue aceptada.</div></li>
+					<li><img src="img/paso-3.jpg" alt=""><div class="txt">
 						<span>3.</span> Un asesor te llama por teléfono y acudes a una entrevista de Bien para Bien con: <br><span class="light">Título de la propiedad del inmueble a dejar en garantía, boleta predial, boleta de agua. Identificación ofical, acta de matrimonio en su caso y comprobantes de ingresos.</span>
 					</div></li>
-					<li><i class="fa fa-laptop" aria-hidden="true"></i><div class="txt"><span>4.</span> En 72 hrs. te informamos si el crédito fue autorizado.</div></li>
+					<li><img src="img/paso-4.jpg" alt=""><div class="txt"><span>4.</span> En 72 hrs. te informamos si el crédito fue autorizado.</div></li>
 				</ul>
 			</div>
 		</div>
@@ -144,8 +178,9 @@
 		</div>
 	</div>
 	<div class="plazas">
-		<div class="blue"></div>
-		<div class="green"></div>
+		<div class="img">
+			<img src="img/plazas.jpg">
+		</div>
 		<div class="content">
 			<h2>Las plazas donde estamos otorgando crédito son:</h2>
 			<ul>
@@ -193,8 +228,8 @@
 		<div class="content">
 			<p>&copy; Bien para Bien SAPI de C.V SOFOM ENR todos los derechos reservados</p>
 			<div class="imgs">
-				<img src="img/logo.png" alt="">
-				<img src="img/logo.png" alt="">
+				<img src="img/logo_buro.png" alt="">
+				<img src="img/conducef.png" alt="">
 			</div>
 		</div>
 	</footer>

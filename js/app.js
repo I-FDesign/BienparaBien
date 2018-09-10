@@ -1,5 +1,25 @@
 $(document).ready(function(){
 
+	//Menu_Mobile------------------------------------
+
+	$('header .bars i').on('click',function(){
+		$('.black').css('display', 'block');
+		$('.menu_options').animate({
+			marginRight : 0},
+			400);
+	});
+
+	$('.menu_options .cross i').on('click', function(){
+		$('.black').css('display', 'none');
+		var options = $('.menu_options').css('width');
+		options = parseInt(options) * -1;
+		$('.menu_options').animate({
+			marginRight : options},
+			400);
+	});
+
+	//-----------------------------------------------
+
 	//Menu-------------------------------------------
 
 	var ventajas = $('.facil').offset().top,
@@ -11,6 +31,12 @@ $(document).ready(function(){
 		$('html, body').animate({
 			scrollTop: ventajas - 100
 		}, 500);
+		$('.black').css('display', 'none');
+		var options = $('.menu_options').css('width');
+		options = parseInt(options) * -1;
+		$('.menu_options').animate({
+			marginRight : options},
+			400);
 	});
 
 	$('.requisitos_btn').on('click', function(e){
@@ -18,6 +44,12 @@ $(document).ready(function(){
 		$('html, body').animate({
 			scrollTop: requisitos - 100
 		}, 500);
+		$('.black').css('display', 'none');
+		var options = $('.menu_options').css('width');
+		options = parseInt(options) * -1;
+		$('.menu_options').animate({
+			marginRight : options},
+			400);
 	});
 
 	$('.plazas_btn').on('click', function(e){
@@ -25,6 +57,12 @@ $(document).ready(function(){
 		$('html, body').animate({
 			scrollTop: plazas - 100
 		}, 500);
+		$('.black').css('display', 'none');
+		var options = $('.menu_options').css('width');
+		options = parseInt(options) * -1;
+		$('.menu_options').animate({
+			marginRight : options},
+			400);
 	});
 
 

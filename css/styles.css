@@ -2,19 +2,16 @@
 	margin:0;
 	padding: 0;
 	font-family: 'Source Sans Pro', sans-serif;
+	box-sizing: border-box;
 }
-
-:-ms-input-placeholder { color: gray; opacity: .8; } /* IE 10+ */
-::-webkit-input-placeholder { color: gray; opacity: .8; } /* WebKit */
-::-moz-placeholder { color: gray; opacity: .8; } /* Firefox 19+ */
-/*rgb(124,138,144)*/
-/*rgb(201,224,79)*/
-/*rgb(202,224,80)*/
-
 .content{
 	width: 80%;
 	margin:0 auto;
 	color:rgb(124,138,144);
+}
+.menu_mobile,
+.menu_options{
+	display: none;
 }
 header{
 	display:flex;
@@ -60,12 +57,11 @@ header .menu nav a:hover{
 .thumb .slider ul li{
 	width: 100%;
 	list-style: none;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
 }
 .thumb .slider ul li img{
-	width: 100%;
-}
-.thumb .slider img{
-	width: 100%;
 	height: 500px;
 }
 .thumb .content{
@@ -146,11 +142,10 @@ header .menu nav a:hover{
 	justify-content: space-between;
 }
 .thumb .content .form .inputflex input[type='text'],
-.thumb .content .form .inputflex select{
+.thumb .content .form .inputflex .select{
 	width: 48%;
 }
-.thumb .content .form input[type='text'],
-.thumb .content .form select{
+.thumb .content .form input[type='text']{
 	width: 100%;
 	box-sizing: border-box;
 	padding:10px;
@@ -160,6 +155,40 @@ header .menu nav a:hover{
 	color:gray;
 	font-size: 15px;
 	opacity: .8;
+}
+.select{
+  	width: 100%;
+  	overflow: hidden;
+  	background: #fff url("https://storage.googleapis.com/instapage-app-assets/img/builder2/select-arrow-drop-down.png") no-repeat 100% center;
+  	display: flex;
+  	align-items: center;
+  	z-index: 99;
+  	box-sizing: border-box;
+	padding:10px;
+	margin-bottom: 15px;
+	border:none;
+	border:1px solid gray;
+	color:gray;
+	font-size: 15px;
+	opacity: .8;
+  	opacity: .7;
+}
+.select select {
+ 	display: block;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	overflow: visible;
+}
+.select select option{
+	width: 130%;
 }
 .thumb .content .form input[type='submit']{
 	margin-top: 10px;
@@ -221,13 +250,11 @@ header .menu nav a:hover{
 	margin-bottom: 20px;
 	font-size: 22px;
 }
-/*---------------Futura Img---------------*/
-.pasos .steps li i{
-	font-size: 60px;
+.pasos .steps li img{
+	height: 65px;
 	margin-right: 40px;
-	color:rgb(201, 224, 79);
+	color:rgb(201, 224, 79);	
 }
-/*----------------------------------------*/
 .video_pasos,
 .video{
 	top:0;
@@ -295,22 +322,23 @@ header .menu nav a:hover{
 	width: 100%;
 	position: relative;
 }
-.plazas .green,
-.plazas .blue{
+.plazas .img{
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	top:0;
+	z-index: -1;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
 }
 .plazas .blue{
 	background: #5177ad;
 	z-index: -2;
 	opacity: .5;
 }
-.plazas .green{
-	background: #00b169;
-	z-index: -1;
-	opacity: .7;
+.plazas .img img{
+	height: 100%;
 }
 .plazas .content{
 	color:white;
@@ -363,7 +391,7 @@ footer .imgs{
 	justify-content: space-between;
 }
 footer .imgs img{
-	height: 40px;
+	height: 50px;
 	width: auto;
 }
 
@@ -381,3 +409,314 @@ footer .imgs img{
 	100%{margin-left: -300%;}
 }
 
+
+@media screen and (max-width: 1000px){
+	.thumb .content{
+		top:43%;
+		width: 97%;
+		flex-direction: column;
+		align-items: center;
+	}
+	.thumb .content .text{
+		width: 100%;
+	}
+	.thumb .content .text .list{
+		margin-bottom: 120px;
+	}
+	.thumb .content .form{
+		margin-top: 60px;
+		width: 50%;
+	}
+	.pasos{
+		margin-top: 1100px;
+	}
+	.pasos .youonly .princ,
+	.pasos .youonly .second{
+		font-size: 30px;
+	}
+	.facil .content{
+		width: 97%;
+	}
+	.plazas .content{
+		width: 100%;
+	}
+	footer .content{
+		width: 90%;
+	}
+}
+@media screen and (max-width: 800px){
+	.thumb .content .form{
+		width: 60%;
+	}
+	.pasos .content{
+		flex-direction: column;
+		align-items: center;
+	}
+	.pasos .content .youonly,
+	.pasos .content .steps{
+		width: 100%;
+	}
+	.pasos .content .youonly .video_btn{
+		margin:30px auto;
+	}
+	.facil .content{
+		flex-direction: column;
+		align-items: center;
+	}
+	.facil .content .logo{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.facil .content .text{
+		text-align: center;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+@media screen and (max-width: 768px){
+	header>.logo,
+	header>.menu{
+		display:none;
+	}
+	header{
+		padding:0;
+	}
+	.menu_mobile{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		padding:10px 20px;
+		width: 100%;
+	}
+	.menu_mobile .logo img{
+		height: 50px;
+		width: auto;
+	}
+	.menu_mobile .bars i{
+		font-size: 20px;
+		color:rgba(0,0,0,.7);
+	}
+	.black{
+		display:none;
+		position: fixed;
+		top:0;
+		height: 100%;
+		width: 100%;
+		background: black;
+		opacity: .4;
+		z-index: 998;
+	}
+	.menu_options{
+		display:block;
+		margin-right: -40%;
+		position: fixed;
+		top:0;
+		right: 0;
+		width: 40%;
+		background: white;
+		z-index: 999;
+		padding:20px;
+		height: 100%;
+		box-shadow: 0 0 10px gray;
+	}
+	.menu_options .cross{
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		font-size: 20px;
+		color:rgba(0,0,0,.7);
+	}
+	.menu_options nav{
+		margin-top: 40px;
+		display:flex;
+		flex-direction: column;
+	}
+	.menu_options nav a{
+		text-decoration: none;
+		color:rgba(0,0,0,.8);
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 12px;
+		padding-bottom: 5px;
+		border-bottom: 2px solid rgb(0, 177, 105);
+	}
+	.thumb .slider img{
+		height: auto;
+		width: 100%;
+	}
+	.thumb .slider ul li img{
+		width: 100%;
+		height: auto;
+	}
+	.thumb .content{
+		position: static;
+		margin-top: 30px;
+	}
+	.thumb .content .text .list{
+		margin-bottom: 50px;
+	}
+	.thumb .content .text .list li{
+		color:rgba(0,0,0,.6);
+		font-weight: 300;
+	}
+	.thumb .content .text .list li span{
+		color:rgb(0, 177, 105);
+	}
+	.pasos{
+		margin-top: 30px;
+	}
+	.pasos .steps li img{
+		margin-right: 20px;
+	}
+	.plazas .content{
+		width: 100%;
+		padding:20px 0;
+	}
+	.plazas ul{
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+	.plazas ul>div{
+		width: 45%;
+		display:flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.plazas ul>div li{
+		width: 70%;
+	}
+	footer .content{
+		flex-direction: column;
+	}
+	footer .imgs{
+		margin-top: 20px;
+		width: 70%;
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 600px){
+	.menu_options{
+		width: 50%;
+		margin-right: -50%;
+	}
+	.thumb .content{
+		width: 95%;
+		margin-top: 10px;
+	}
+	.thumb .content .text h1{
+		font-size: 33px;
+	}
+	.thumb .content .text .list li{
+		font-size: 20px;
+		font-weight: normal;
+	}
+	.thumb .content .text .list li span{
+		font-size: 30px;
+	}
+	.thumb .content .text h2{
+		font-size: 30px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	footer p{
+		width: 100%;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 500px){
+	.video iframe{
+		max-height: 50%;
+		width: 90%;
+	}
+	.thumb .content .text h1{
+		font-size: 29px;
+		margin-bottom: 3px;
+	}
+	.thumb .content .text .list li{
+		margin-bottom: -10px;
+	}
+	.thumb .content .text .list2 li{
+		font-size: 18px;
+		margin-bottom: -10px;
+	}
+	.thumb .content .text .list2 li span.bull{
+		font-size: 30px;
+	}
+	.thumb .content .form{
+		width: 80%;
+	}
+	.pasos .content{
+		width: 90%;
+	}
+	.pasos .youonly .princ,
+	.pasos .youonly .second{
+		font-size: 25px;
+	}
+	.pasos .steps li img{
+		height: 55px;
+	}
+	.pasos .steps ul li .txt{
+		font-size: 20px;
+	}
+	.plazas h2{
+		font-size: 29px;
+	}
+	.plazas ul>div li{
+		width: 95%;
+		font-size: 18px;
+	}
+	.plazas .plazas_btn{
+		width: 70%;
+		padding:10px ;
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 400px){
+	.menu_options{
+		width: 60%;
+		margin-right: -60%;
+	}
+	.menu_options nav a{
+		font-size: 17px;
+	}
+	.plazas h2{
+		font-size: 26px;
+	}
+	footer p{
+		font-size: 14px;
+	}
+}
+@media screen and (max-width: 360px){
+	.thumb .content .text h1{
+		font-size: 25px;
+	}
+	.thumb .content .text .list li{
+		font-size: 18px;
+	}
+	.thumb .content .text h2{
+		font-size: 25px;
+		width: 100%;
+	}
+	.thumb .content .form{
+		width: 97%;
+		padding:0;
+		padding:10px 15px;
+	}
+	.pasos .steps ul li img{
+		margin-right: 10px;
+	}
+	.plazas .content{
+		width: 100%;
+	}
+	.plazas h2{
+		font-size: 25px;
+	}
+	.plazas ul{
+		justify-content: flex-end;
+		width: 100%;
+	}
+	.plazas ul>div li{
+		width: 100%;
+		font-size: 16px;
+	}
+}
