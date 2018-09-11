@@ -102,6 +102,7 @@ $(document).ready(function(){
 	$('#obtener').on('click',function(e){
 		e.preventDefault();
 		$('.message').slideDown(300);
+		$('.message').css('display', 'flex');
 	})
 
 	$('.message i').on('click',function(){
