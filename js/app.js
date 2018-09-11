@@ -26,6 +26,8 @@ $(document).ready(function(){
 		requisitos = $('.pasos').offset().top,
 		plazas = $('.plazas').offset().top;
 
+	var form_l = $('#form_princ').offset().top;
+
 	$('.ventajas_btn').on('click', function(e){
 		e.preventDefault();
 		$('html, body').animate({
@@ -52,7 +54,7 @@ $(document).ready(function(){
 			400);
 	});
 
-	$('.plazas_btn').on('click', function(e){
+	$('.plazas_btn_menu').on('click', function(e){
 		e.preventDefault();
 		$('html, body').animate({
 			scrollTop: plazas - 100
@@ -82,6 +84,29 @@ $(document).ready(function(){
 			$('.video_pasos').slideUp(400);
 		}
 	});
+
+	//---------------------------------------------------
+
+	//Redireccion al form--------------------------------
+
+	$('#want').on('click', function(){
+		$('html, body').animate({
+			scrollTop: form_l
+		}, 400);
+	});
+
+	//---------------------------------------------------
+
+	//Mensaje formulario---------------------------------
+
+	$('#obtener').on('click',function(e){
+		e.preventDefault();
+		$('.message').slideDown(300);
+	})
+
+	$('.message i').on('click',function(){
+		$('.message').slideUp(300);
+	})
 
 	//---------------------------------------------------
 });

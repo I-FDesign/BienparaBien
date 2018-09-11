@@ -11,25 +11,29 @@
 <body>
 	<header>
 		<div class="logo">
-			<img src="img/logo.png" alt="">
+			<img src="img/logo.jpg" alt="">
 		</div>
 		<div class="menu">
 			<nav>
 				<a href="" class='want'>QUIERO MI CRÉDITO</a>
 				<a href="" class='ventajas_btn'>VENTAJAS</a>
 				<a href="" class='requisitos_btn'>REQUISITOS</a>
-				<a href="" class='plazas_btn'>PLAZAS</a>
+				<a href="" class='plazas_btn_menu'>PLAZAS</a>
 			</nav>
 		</div>
 		<div class="menu_mobile">
 			<div class="logo">
-				<img src="img/logo.png" alt="">
+				<img src="img/logo.jpg" alt="">
 			</div>
 			<div class="bars">
 				<i class="fa fa-bars" aria-hidden="true"></i>
 			</div>
 		</div>
 	</header>
+	<div class="message ok">
+		<p>Gracias por tu consulta. Un asesor comercial se contactará a la brevedad!</p>
+		<i class="fa fa-times" aria-hidden="true"></i>
+	</div>
 	<div class="black"></div>
 	<div class="menu_options">
 		<div class="cross">
@@ -75,7 +79,7 @@
 				</ul>
 			</div>
 			</div>
-			<div class="form">
+			<div class="form" id='form_princ'>
 				<p class='tit'>Solicita tu <span>Crédito</span></p>
 				<form>
 					<input type="text" placeholder="Nombre y Apellido">
@@ -115,7 +119,7 @@
 					</div>
 					<input type="text" placeholder="Calle y Número">
 					<input type="text" placeholder="Código Postal">
-					<input type="submit" value="OBTENER MI CRÉDITO">
+					<input type="submit" value="OBTENER MI CRÉDITO" id='obtener'>
 				</form>
 				<p class='legales'>LEGALES: Tasa anual Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia cum, nam exercitationem impedit minus.</p>
 			</div>
@@ -156,7 +160,7 @@
 	<div class="facil">
 		<div class="content">
 			<div class="logo">
-				<img src="img/logo.png">
+				<img src="img/logo_gris.jpg">
 				<p><span>es:</span></p>
 			</div>
 			<div class="text">
@@ -219,7 +223,7 @@
 					<li>Chiapas</li>
 				</div>
 			</ul>
-			<div class="plazas_btn">
+			<div class="plazas_btn" id='want'>
 				<p>QUIERO MI CRÉDITO</p>
 			</div>
 		</div>

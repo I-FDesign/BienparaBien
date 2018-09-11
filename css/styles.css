@@ -38,6 +38,27 @@ header .menu nav a:hover{
 	transition: .3s all ease;
 	color:#00b169;
 }
+.message{
+	padding:20px;
+	color:white;
+	position: fixed;
+	top:0;
+	width: 100%;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 999;
+}
+.message p{
+	font-size: 18px;
+}
+.message i{
+	font-size: 20px;
+	cursor: pointer;
+}
+.ok{
+	background: #488A48;
+}
 .thumb{
 	position:relative;
 	display:flex;
@@ -62,11 +83,12 @@ header .menu nav a:hover{
 	overflow: hidden;
 }
 .thumb .slider ul li img{
+	width: 100%;
 	height: 500px;
 }
 .thumb .content{
 	position: absolute;
-	top:15%;
+	top:18%;
 	width: 80%;
 	margin: 0 auto;
 	display:flex;
@@ -186,6 +208,7 @@ header .menu nav a:hover{
 	-o-appearance: none;
 	appearance: none;
 	overflow: visible;
+	opacity: .8;
 }
 .select select option{
 	width: 130%;
@@ -339,6 +362,7 @@ header .menu nav a:hover{
 }
 .plazas .img img{
 	height: 100%;
+	width: 100%;
 }
 .plazas .content{
 	color:white;
@@ -409,19 +433,32 @@ footer .imgs img{
 	100%{margin-left: -300%;}
 }
 
+@media screen and (max-width: 1250px){
+	.thumb .slider ul li img{
+		width: auto;
+	}
+	.plazas .img img{
+		width: auto;
+		height: 100%;
+	}	
+}
 
 @media screen and (max-width: 1000px){
 	.thumb .content{
-		top:43%;
+		top:47%;
 		width: 97%;
 		flex-direction: column;
 		align-items: center;
+	}
+	.thumb .slider ul li{
+		display:flex;
+		justify-content: flex-start;
 	}
 	.thumb .content .text{
 		width: 100%;
 	}
 	.thumb .content .text .list{
-		margin-bottom: 120px;
+		margin-bottom: 100px;
 	}
 	.thumb .content .form{
 		margin-top: 60px;
@@ -623,6 +660,11 @@ footer .imgs img{
 		text-align: center;
 	}
 }
+@media screen and (max-width: 550px){
+	.message p{
+		font-size: 17px;
+	}
+}
 @media screen and (max-width: 500px){
 	.video iframe{
 		max-height: 50%;
@@ -671,6 +713,15 @@ footer .imgs img{
 		font-size: 18px;
 	}
 }
+@media screen and (max-width: 450px){
+	.message{
+		padding:15px;
+	}
+	.message p{
+		font-size: 16px;
+		letter-spacing: 0;
+	}
+}
 @media screen and (max-width: 400px){
 	.menu_options{
 		width: 60%;
@@ -678,6 +729,12 @@ footer .imgs img{
 	}
 	.menu_options nav a{
 		font-size: 17px;
+	}
+	.message p{
+		font-size: 15px;
+	}
+	.message i{
+		font-size: 16px;
 	}
 	.plazas h2{
 		font-size: 26px;
@@ -687,6 +744,12 @@ footer .imgs img{
 	}
 }
 @media screen and (max-width: 360px){
+	.message{
+		padding:15px 10px;
+	}
+	.message p{
+		font-size: 14px;
+	}
 	.thumb .content .text h1{
 		font-size: 25px;
 	}
