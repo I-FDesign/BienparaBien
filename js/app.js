@@ -101,8 +101,8 @@ $(document).ready(function(){
 
 	$('#obtener').on('click',function(e){
 		e.preventDefault();
+		$('.message').css('visibility', 'visible');
 		$('.message').slideDown(300);
-		$('.message').css('display', 'flex');
 	})
 
 	$('.message i').on('click',function(){

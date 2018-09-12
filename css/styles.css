@@ -48,7 +48,7 @@ header .menu nav a:hover{
 	align-items: center;
 	justify-content: space-between;
 	z-index: 999;
-	display: none;
+	visibility: hidden;
 }
 .message p{
 	font-size: 18px;
@@ -309,7 +309,7 @@ header .menu nav a:hover{
 	width: 100%;
 }
 .facil{
-	background:rgb(236, 239, 241);
+	background:#f8f8f8;
 	margin-top: 30px;
 	padding:20px 0;
 }
@@ -432,6 +432,12 @@ footer .imgs img{
 
 	75%{margin-left: -300%;}
 	100%{margin-left: -300%;}
+}
+
+@media screen and (max-width: 1920px){
+	.thumb .slider ul li img{
+		width: auto;
+	}
 }
 
 @media screen and (max-width: 1250px){
@@ -578,13 +584,9 @@ footer .imgs img{
 		padding-bottom: 5px;
 		border-bottom: 2px solid rgb(0, 177, 105);
 	}
-	.thumb .slider img{
-		height: auto;
-		width: 100%;
-	}
 	.thumb .slider ul li img{
 		width: 100%;
-		height: auto;
+		height: 100%;
 	}
 	.thumb .content{
 		position: static;
