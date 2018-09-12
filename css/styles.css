@@ -89,12 +89,12 @@ header .menu nav a:hover{
 }
 .thumb .content{
 	position: absolute;
-	top:18%;
+	top:125px; /* This is because the slider has a height of 500px */
 	width: 80%;
 	margin: 0 auto;
 	display:flex;
 	justify-content: space-between;
-	align-items: flex-end;
+	/* align-items: flex-end; */
 }
 .thumb .content .text{
 	width: 55%;
@@ -172,9 +172,9 @@ header .menu nav a:hover{
 	width: 100%;
 	box-sizing: border-box;
 	padding:10px;
-	margin-bottom: 15px;
-	border:none;
-	border:1px solid gray;
+	/* margin-bottom: 15px; */
+	/* border:none;
+	border:1px solid gray; */
 	color:gray;
 	font-size: 15px;
 	opacity: .8;
@@ -182,15 +182,15 @@ header .menu nav a:hover{
 .select{
   	width: 100%;
   	overflow: hidden;
-  	background: #fff url("https://storage.googleapis.com/instapage-app-assets/img/builder2/select-arrow-drop-down.png") no-repeat 100% center;
-  	display: flex;
+  	/* background: #fff url("https://storage.googleapis.com/instapage-app-assets/img/builder2/select-arrow-drop-down.png") no-repeat 100% center;
+  	display: flex; */
   	align-items: center;
   	z-index: 99;
   	box-sizing: border-box;
 	padding:10px;
 	margin-bottom: 15px;
-	border:none;
-	border:1px solid gray;
+	/* border:none;
+	border:1px solid gray; */
 	color:gray;
 	font-size: 15px;
 	opacity: .8;
@@ -199,10 +199,10 @@ header .menu nav a:hover{
 .select select {
  	display: block;
     width: 130%;
-    border: none;
+    /* border: none; */
     box-shadow: none;
     background-color: transparent;
-    background-image: none;
+    /* background-image: none; */
     appearance: none;
     -webkit-appearance: none;
 	-moz-appearance: none;
@@ -231,7 +231,7 @@ header .menu nav a:hover{
 	margin-top: 20px;
 }
 .pasos{
-	margin-top: 370px;
+	margin-top: 390px;
 }
 .pasos .content{
 	display:flex;
@@ -446,7 +446,7 @@ footer .imgs img{
 
 @media screen and (max-width: 1000px){
 	.thumb .content{
-		top:47%;
+		top:30%;
 		width: 97%;
 		flex-direction: column;
 		align-items: center;
@@ -466,7 +466,7 @@ footer .imgs img{
 		width: 50%;
 	}
 	.pasos{
-		margin-top: 1100px;
+		margin-top: 1250px;
 	}
 	.pasos .youonly .princ,
 	.pasos .youonly .second{
@@ -784,3 +784,5 @@ footer .imgs img{
 		font-size: 16px;
 	}
 }
+
+p { margin-bottom: inherit!important;}

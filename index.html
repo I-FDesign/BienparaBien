@@ -7,6 +7,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" rel="stylesheet">
 	<script src="https://use.fontawesome.com/2d83eb3d68.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
 	<header>
@@ -56,70 +57,146 @@
 			</ul>
 		</div>
 		<div class="content">
-			<div class="text">
-				<h1>El crédito más flexible que se adapta a tu necesidad.</h1>
-				<div class="list">
-					<ul>
-						<li><span>&bull;</span>Préstamo Personal y Pago de pasivos.</li>
-						<li><span>&bull;</span>Créditos para tu PyME.</li>
-						<li><span>&bull;</span>Créditos para tu negocio.</li>
-						<li><span>&bull;</span>Créditos para capital de trabajo.</li>
-					</ul>
+			<div class="text py-5">
+				<div>
+					<h1>El crédito más flexible que se adapta a tu necesidad.</h1>
+					<div class="list">
+						<ul>
+							<li><span>&bull;</span>Préstamo Personal y Pago de pasivos.</li>
+							<li><span>&bull;</span>Créditos para tu PyME.</li>
+							<li><span>&bull;</span>Créditos para tu negocio.</li>
+							<li><span>&bull;</span>Créditos para capital de trabajo.</li>
+						</ul>
+					</div>
 				</div>
 
-			<h2>Tu crédito desde <span>$400,000</span> y hasta <span>$3,000,000</span></h2>
-			<div class="list2">
-				<ul>
-					<li><span class='bull'>&bull;</span>Tasa FIJA competitiva <span class="bld">desde el 20% hasta el 80%</span></li>
-					<li><span class='bull'>&bull;</span>Plazo <span class="bld">desde 1 año hasta 5 años</span></li>
-					<li><span class='bull'>&bull;</span>En máximo <span class='bld'>72 horas te precalificamos</span></li>
-					<li><span class='bull'>&bull;</span>Línea adicional de <span class='bld'>$50,000 para desarrollo empresarial</span></li>
-					<li><span class='bull'>&bull;</span><span class="bld">Requerimientos y documentos mínimos</span></li>
-					<li><span class='bull'>&bull;</span><span class="bld">Comisión</span> por apertura solo <span class="bld">del 3%</span></li>
-				</ul>
+				<div class="pt-2">
+					<h2>Tu crédito desde <span>$400,000</span> y hasta <span>$3,000,000</span></h2>
+					<div class="list2">
+						<ul>
+							<li><span class='bull'>&bull;</span>Tasa FIJA competitiva <span class="bld">desde el 20% hasta el 80%</span></li>
+							<li><span class='bull'>&bull;</span>Plazo <span class="bld">desde 1 año hasta 5 años</span></li>
+							<li><span class='bull'>&bull;</span>En máximo <span class='bld'>72 horas te precalificamos</span></li>
+							<li><span class='bull'>&bull;</span>Línea adicional de <span class='bld'>$50,000 para desarrollo empresarial</span></li>
+							<li><span class='bull'>&bull;</span><span class="bld">Requerimientos y documentos mínimos</span></li>
+							<li><span class='bull'>&bull;</span><span class="bld">Comisión</span> por apertura solo <span class="bld">del 3%</span></li>
+						</ul>
+					</div>
+				</div>
 			</div>
-			</div>
-			<div class="form" id='form_princ'>
+			<div class="form" id="form-credit">
 				<p class='tit'>Solicita tu <span>Crédito</span></p>
 				<form>
-					<input type="text" placeholder="Nombre y Apellido">
-					<div class="inputflex">
-						<input type="text" placeholder="Mail">
-						<input type="text" placeholder="Teléfono">
-					</div>
-					<div class="inputflex">
-						<div class="select">
-							<select name="" id="">
-								<option value="">Monto del préstamo</option>
-							</select>
+					<div class="row px-3">
+						<div class="col-12 mb-2 p-1">
+							<input class="form-control" type="text" name="nombre" placeholder="Nombre y Apellido">
+							<div class="valid-feedback">
+								<span class="fa fa-check"></span> OK
+							</div>
+							<div class="invalid-feedback">
+								<span class="fa fa-exclamation-circle"></span> Se debe cargar un nombre y apellido
+							</div>
 						</div>
-						<div class="select">
-							<select name="" id="">
-								<option value="">Plazo</option>
-							</select>
+						<div class="col-12 col-md-6 mb-2 p-1">
+							<input class="form-control" type="text" name="email" placeholder="Mail">
+							<div class="valid-feedback">
+								<span class="fa fa-check"></span> OK
+							</div>
+							<div class="invalid-feedback">
+								<span class="fa fa-exclamation-circle"></span> No es un email válido
+							</div>
 						</div>
-					</div>
-					<div class="inputflex">
-						<div class="select">
-							<select name="" id="">
-								<option value="">Tipo de propiedad</option>
-							</select>
+						<div class="col-12 col-md-6 mb-2 p-1">
+							<input class="form-control" type="text" name="telefono" placeholder="Teléfono">
+							<div class="valid-feedback">
+								<span class="fa fa-check"></span> OK
+							</div>
+							<div class="invalid-feedback">
+								<span class="fa fa-exclamation-circle"></span> No es un teléfono válido
+							</div>
 						</div>
-						<input type="text" name="" placeholder="Valor de la propiedad">
+						<div class="col-12 mb-2 p-1">
+							<div class="select input-group m-0 p-0">
+								<select class="custom-select" name="prestamo">
+									<option value="">Monto del préstamo</option>
+									<option value="">$ 10000</option>
+									<option value="">$ 20000</option>
+									<option value="">$ 30000</option>
+								</select>
+								<div class="invalid-feedback">
+									<span class="fa fa-exclamation-circle"></span> Se debe seleccionar un monto
+								</div>
+							</div>
+						</div>
+						<div class="col-12 mb-2 p-1">
+							<div class="select input-group m-0 p-0">
+								<select class="custom-select" name="plazo">
+									<option value="">Plazo</option>
+								</select>
+								<div class="invalid-feedback">
+									<span class="fa fa-exclamation-circle"></span> Se debe seleccionar un plazo
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 mb-2 p-1">
+							<div class="select input-group m-0 p-0">
+								<select class="custom-select" name="tipo">
+									<option value="">Tipo de propiedad</option>
+								</select>
+								<div class="invalid-feedback">
+									<span class="fa fa-exclamation-circle"></span> Se debe seleccionar un tipo de propiedad
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-6 mb-2 p-1">
+							<input class="form-control" type="text" name="valor" placeholder="Valor de la propiedad">
+							<div class="valid-feedback">
+								<span class="fa fa-check"></span> OK
+							</div>
+							<div class="invalid-feedback">
+								<span class="fa fa-exclamation-circle"></span> El valor de la propiedad no llega al mínimo
+							</div>
+						</div>
+						<div class="col-12 mb-2 p-1">
+							<div class="select input-group m-0 p-0">
+								<select class="custom-select" name="estado">
+									<option value="">Estado</option>
+								</select>
+								<div class="invalid-feedback">
+									<span class="fa fa-exclamation-circle"></span> Se debe seleccionar un estado
+								</div>
+							</div>
+						</div>
+						<div class="col-12 mb-2 p-1">
+							<div class="select input-group m-0 p-0">
+								<select class="custom-select" name="municipio">
+									<option value="">Municipios o Alcaldias</option>
+								</select>
+								<div class="invalid-feedback">
+									<span class="fa fa-exclamation-circle"></span> Se debe seleccionar un municipio
+								</div>
+							</div>
+						</div>
+						<div class="col-12 mb-2 p-1">
+							<input class="form-control" type="text" name="direccion" placeholder="Calle y Número">
+							<div class="valid-feedback">
+								<span class="fa fa-check"></span> OK
+							</div>
+							<div class="invalid-feedback">
+								<span class="fa fa-exclamation-circle"></span> Dirección inválida
+							</div>
+						</div>
+						<div class="col-12 mb-2 p-1">
+							<input class="form-control" type="text" name="codigo-postal" placeholder="Código Postal">
+							<div class="valid-feedback">
+								<span class="fa fa-check"></span> OK
+							</div>
+							<div class="invalid-feedback">
+								<span class="fa fa-exclamation-circle"></span> Código postal inválido
+							</div>
+						</div>
+						<input class="mx-1" type="submit" value="OBTENER MI CRÉDITO" id='obtener'>
 					</div>
-					<div class="select">
-						<select name="" id="">
-							<option value="">Estado</option>
-						</select>
-					</div>
-					<div class="select">
-						<select name="" id="">
-							<option value="">Municipios o Alcaldias</option>
-						</select>
-					</div>
-					<input type="text" placeholder="Calle y Número">
-					<input type="text" placeholder="Código Postal">
-					<input type="submit" value="OBTENER MI CRÉDITO" id='obtener'>
 				</form>
 				<p class='legales'>LEGALES: Tasa anual Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi officia cum, nam exercitationem impedit minus.</p>
 			</div>
@@ -238,6 +315,7 @@
 		</div>
 	</footer>
 	<script type="text/javascript" src='js/jquery-3.1.1.min.js'></script>
+	<script type="text/javascript" src='js/bootstrap.min.js'></script>
 	<script type="text/javascript" src='js/app.js'></script>
 </body>
 </html>
