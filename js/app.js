@@ -151,7 +151,7 @@ $(document).ready(function(){
 		// VALIDACION VALOR
 		var valor = $('[name=valor]');
 		var monto = $('[name=prestamo] option:selected').text().replace(/\$ /,'');
-		valid &= itemValid(valor,parseFloat(valor.val()) > parseFloat(monto));
+		valid &= itemValid(valor,2*parseFloat(valor.val()) > parseFloat(monto));
 	
 		// VALIDACION DIRECCION
 		var direccion = $('[name=direccion]');
