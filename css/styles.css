@@ -29,7 +29,7 @@ header .menu nav a{
 	text-decoration: none;
 	color:rgb(124,138,144);
 	padding:10px;
-	font-weight: 400;
+	font-weight: bold;
 }
 header .menu nav a.want{
 	color: #00b169;
@@ -99,13 +99,17 @@ header .menu nav a:hover{
 .thumb .content .text{
 	width: 55%;
 }
+.thumb .content .mobile{
+	display:none;
+}
 .thumb .content .text h1{
-	color:rgb(201,224,79);
+	color:rgb(202,224,80);
+	font-weight: bold;
 	font-size: 40px;
 	margin-bottom: -5px;
 }
 .thumb .content .text .list{
-	margin-bottom: 12%;
+	margin-bottom: 18%;
 }
 .thumb .content .text .list li{
 	list-style: none;
@@ -114,32 +118,36 @@ header .menu nav a:hover{
 	font-weight: bold;
 	display:flex;
 	align-items: baseline;
-	margin-bottom: -15px;
+	margin-bottom: -23px;
 	letter-spacing: .5px;
 }
 .thumb .content .text .list li span{
 	margin-right: 5px;
 	font-size: 40px;
 }
-.thumb .content .text h2{
+.thumb .content .text .pt-2,
+.thumb .content .mobile{
+	background: #f8f8f8;
+}
+.thumb .content h2{
 	font-size: 35px;
 	font-weight: normal;
 }
-.thumb .content .text h2 span{
+.thumb .content  h2 span{
 	color:rgb(0, 177, 105);
 	font-weight: bold;
 }
-.thumb .content .text .list2 li{
+.thumb .content .list2 li{
 	font-size: 20px;
 	list-style: none;
 	margin-bottom: -17px;
 }
-.thumb .content .text .list2 li span.bull{
+.thumb .content .list2 li span.bull{
 	color:rgb(0, 177, 105);
 	font-size: 35px;
 	margin-right: 7px;
 }
-.thumb .content .text .list2 li span.bld{
+.thumb .conten .list2 li span.bld{
 	font-weight: bold;
 }
 .thumb .content .form{
@@ -439,14 +447,15 @@ footer .imgs img{
 		width: auto;
 	}
 }
-
-@media screen and (max-width: 1250px){
-	.thumb .slider ul li img{
-		width: auto;
-	}
+@media screen and (max-width: 1830px){
 	.plazas .img img{
 		width: auto;
 		height: 100%;
+	}
+}
+@media screen and (max-width: 1250px){
+	.thumb .slider ul li img{
+		width: auto;
 	}	
 }
 
@@ -457,15 +466,19 @@ footer .imgs img{
 		flex-direction: column;
 		align-items: center;
 	}
-	.thumb .slider ul li{
+	.thumb .slider ul li,
+	.plazas .img{
 		display:flex;
 		justify-content: flex-start;
+	}
+	.plazas .img img{
+		width: auto;
 	}
 	.thumb .content .text{
 		width: 100%;
 	}
-	.thumb .content .text .list{
-		margin-bottom: 100px;
+	.thumb .content .list{
+		margin-bottom: 150px;
 	}
 	.thumb .content .form{
 		margin-top: 60px;
@@ -592,10 +605,13 @@ footer .imgs img{
 	}
 	.thumb .content{
 		position: static;
-		margin-top: 30px;
 	}
-	.thumb .content .text .list{
-		margin-bottom: 50px;
+	.thumb .content .text .desktop{
+		display: none;
+	}
+	.thumb .content .mobile{
+		display: block;
+		margin-top: 30px;
 	}
 	.thumb .content .text .list li{
 		color:rgba(0,0,0,.6);
@@ -603,6 +619,9 @@ footer .imgs img{
 	}
 	.thumb .content .text .list li span{
 		color:rgb(0, 177, 105);
+	}
+	.thumb .content .form{
+		margin-top: 0;
 	}
 	.pasos{
 		margin-top: 30px;
@@ -645,6 +664,9 @@ footer .imgs img{
 		width: 95%;
 		margin-top: 10px;
 	}
+	.thumb .content .text{
+		margin-top: 0;
+	}
 	.thumb .content .text h1{
 		font-size: 33px;
 	}
@@ -655,7 +677,7 @@ footer .imgs img{
 	.thumb .content .text .list li span{
 		font-size: 30px;
 	}
-	.thumb .content .text h2{
+	.thumb .content h2{
 		font-size: 30px;
 		text-align: center;
 		margin-bottom: 10px;
@@ -682,11 +704,11 @@ footer .imgs img{
 	.thumb .content .text .list li{
 		margin-bottom: -10px;
 	}
-	.thumb .content .text .list2 li{
+	.thumb .content .list2 li{
 		font-size: 18px;
 		margin-bottom: -10px;
 	}
-	.thumb .content .text .list2 li span.bull{
+	.thumb .content .list2 li span.bull{
 		font-size: 30px;
 	}
 	.thumb .content .form{
@@ -761,7 +783,7 @@ footer .imgs img{
 	.thumb .content .text .list li{
 		font-size: 18px;
 	}
-	.thumb .content .text h2{
+	.thumb .content h2{
 		font-size: 25px;
 		width: 100%;
 	}
