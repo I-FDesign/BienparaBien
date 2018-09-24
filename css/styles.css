@@ -70,6 +70,9 @@ header .menu nav a:hover{
 	width: 100%;
 	overflow: hidden;
 }
+.thumb .slider ul.sl_mobile{
+	display:none;
+}
 .thumb .slider ul{
 	width: 400%;
 	display:flex;
@@ -368,6 +371,9 @@ header .menu nav a:hover{
 	background: #5177ad;
 	z-index: -2;
 	opacity: .5;
+}
+.plazas .pz_mb{
+	display: none;
 }
 .plazas .img img{
 	height: 100%;
@@ -762,6 +768,26 @@ footer .imgs img{
 	}
 	.message i{
 		font-size: 16px;
+	}
+	.thumb .slider ul.sl_desktop{
+		display: none;
+	}
+	.thumb .slider ul.sl_mobile{
+		display:flex;
+	}
+	.thumb .slider ul li img{
+		width: 100%;
+		height: auto;
+	}
+	.plazas .pz_dk{
+		display: none;
+	}
+	.plazas .pz_mb{
+		display: block;
+	}
+	.plazas .img img{
+		width: 100%;
+		height: auto;
 	}
 	.plazas h2{
 		font-size: 26px;
