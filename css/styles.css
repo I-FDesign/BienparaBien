@@ -128,10 +128,6 @@ header .menu nav a:hover{
 	margin-right: 5px;
 	font-size: 40px;
 }
-.thumb .content .text .pt-2,
-.thumb .content .mobile{
-	background: #f8f8f8;
-}
 .thumb .content h2{
 	font-size: 35px;
 	font-weight: normal;
@@ -476,6 +472,10 @@ footer .imgs img{
 	.plazas .img{
 		display:flex;
 		justify-content: flex-start;
+	}
+	.thumb .content .text .pt-2,
+	.thumb .content .mobile{
+		background: #f8f8f8;
 	}
 	.plazas .img img{
 		width: auto;
